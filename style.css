@@ -1,0 +1,117 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%; 
+    width: 100%;
+}
+
+body {
+    background:black;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/*NAVIGATION BAR*/
+#nav-bar {
+    text-align: center;
+    align-items: center;
+    margin: 7px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #fff;
+    line-height: 1.7;
+    flex-wrap: auto;
+    overflow: auto;
+}
+
+.nav-el {
+    color: rgb(255, 255, 255);
+    padding: 0 25px;
+    font-size: 16px;
+    transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/*/*NAVIGATION BAR-FOR MEDIUM SCREENS*/
+
+@media screen and (max-width: 768px) {
+    .nav-el {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-el {
+        font-size: 9px;
+        padding: 10px 10px;
+    }
+}
+
+#createButon {
+    font-family: 'Press Start 2P', cursive; /* This is a typical arcade-style font. Ensure you've imported it or use a suitable fallback */
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 3px dashed white; /* intermittent white line */
+    border-radius: 10px; /* to make the button slightly rounded */
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease; /* smooth transition for hover effect */
+}
+
+#createButon:hover {
+    background-color: #222;
+}
+
+.desktop {
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 100px; /* Height of each row */
+    gap: 10px; /* 10px space between folders */
+    justify-content: center; /* Center the grid horizontally */
+}
+
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    z-index: 2; /* This ensures that the grid items are above the folders */
+}
+
+.folder {
+    position:absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+    height: 90px; /* Adjust based on image height and text */
+    font-size: 9px;
+    text-align: center;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 10px;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.423);
+    z-index: 1; /* Make sure the folder is below grid items */
+}
+
+.folder img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 5px auto;  /* Center the image horizontally */
+}
